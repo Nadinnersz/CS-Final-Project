@@ -76,7 +76,7 @@ body {
     }
 }
 
-.header1 { /*where the main heading is and applies a background image witha centered header*/
+.header1 { /*where the main heading is and applies a background image with a centered header*/
     padding: 60px;
     text-align: center;
     background-image: url("poverty.png");
@@ -133,7 +133,7 @@ body {
 }
 
 #img1:hover {
-    transform: scale(0.8, 1.0); /*when hovered the image turns big*/
+    transform: scale(0.8, 1.0); /*when hovered the image turns small*/
 }
 
 .content2 {
