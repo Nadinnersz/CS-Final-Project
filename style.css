@@ -1,0 +1,465 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family:'Times New Roman', Times, serif;
+}
+
+/*makes the navigation bar and is applied with pseudoclasses*/
+.topnav {
+    overflow: hidden;
+    background-color: rgb(18, 85, 18);
+}
+
+.topnav a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.topnav a:hover { /*When you put your cursor on the element, the following css applies*/
+    background-color: #ddd;
+    color: black;
+}
+
+.topnav a.active { /*When the navigation link is in the process of being activated, the following css applies*/
+    background-color: rgb(70, 141, 70);
+    color: white;
+}
+
+.topnav .search-container {
+    float: right; /*moves the search container to the right*/
+}
+
+.topnav input[type=text] {
+    padding: 6px;
+    margin-top: 8px;
+    font-size: 17px;
+    border: none;
+}
+
+.topnav .search-container button { 
+    float: right; /*moves the search container button to the right*/
+    padding: 6px 10px;
+    margin-top: 8px;
+    margin-right: 16px;
+    background: #ddd;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+}
+
+.topnav .search-container button:hover {
+    background: #ccc; /*when hovered, the search container changes to this color*/
+}
+
+@media screen and (max-width: 600px) {
+    .topnav .search-container {
+        float: none;
+    }
+    .topnav a, .topnav input[type=text], .topnav .search-container button {
+        float: none;
+        display: block;
+        text-align: left;
+        width: 100%;
+        margin: 0;
+        padding: 14px;
+    }
+    .topnav input[type=text] {
+        border: 1px solid #ccc;  
+    }
+}
+
+.header1 { /*where the main heading is and applies a background image witha centered header*/
+    padding: 60px;
+    text-align: center;
+    background-image: url("poverty.png");
+    color: white;
+    font-size: 30px;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    padding-bottom: 50px;
+}
+
+.content {
+    padding: 20px;
+    text-align: center;
+    background-color: rgb(125, 166, 125);
+    border: 2px solid rgb(18, 95, 18);
+}
+
+#para1 { /*makes the sub-heading go down*/
+    clear: right;
+    width: 40%;
+    margin: 0 auto;
+}
+
+
+.overlay-box {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 30px;
+    border-radius: 8px;
+}
+
+.download-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 20px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+#img1 {
+    border: 1px solid #1a3c1b;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 22px;
+    width: 300px;
+    float: left;
+    background-color: #165d19;
+    overflow: auto;
+    transition: 2s ease-in-out; /*makes the transition smooth*/
+}
+
+#img1:hover {
+    transform: scale(0.8, 1.0); /*when hovered the image turns big*/
+}
+
+.content2 {
+    text-align: left; /*makes the text hover around the image*/
+    padding-top: 100px;
+    border-width: 50%;
+    height: 100%;
+    border: 2px solid rgb(142, 173, 142);
+    padding-bottom: 150px;
+    background-color: rgb(197, 222, 197);
+}
+
+.para {
+    padding-top: 50px;
+    text-align: center;
+    padding-bottom: 50px;
+    text-align: center;
+    background-color: rgb(18, 95, 18);
+    border: 2px solid rgb(18, 95, 18);
+    color: white;
+}
+
+.gallery {
+  float: left; /*floats all images inside this div to the left*/
+}
+
+.gallery2 {
+  background-color: rgb(17, 78, 17);
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 10px;
+  height: 300px; /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+  color: white;
+}
+
+.button {
+  border: none;
+  color: white;
+  padding: 50px 50px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  margin: 4px 2px;
+  transition-duration: 0.4s; /*the amount of time it takes to apply the syle*/
+  cursor: pointer;
+}
+
+.button1 {
+  background-color: white; 
+  color: black; 
+  border: 2px solid rgb(111, 174, 111);
+}
+
+.button1:hover {
+  background-color: rgb(20, 78, 20); /*when hovered, the styles will apply*/
+  color: white;
+}
+
+.button2 {
+  background-color: white; 
+  color: black; 
+  border: 2px solid rgb(111, 174, 111);
+  text-align: center;
+}
+
+.button2:hover {
+  background-color: rgb(20, 78, 20);
+  color: white; /*when hovered, the styles will apply*/
+}
+
+.buttons {
+  text-align: center;
+  margin-left: 290px;;
+}
+.img3 { /*Makes the image go to right and makes the text wrap around it*/
+  float: right;
+  border: 1px solid black;
+  padding: 20px;
+  margin: 20px;
+}
+
+#img2 { /*makes the image go to left and makes the text wrap around it*/
+  border: 1px solid #aee0b0;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 20px;
+  width: 300px;
+  float: left;
+  background-color: rgb(125, 166, 125);
+  overflow: auto;
+  transition: 2s ease-in-out; /*makes the transition smooth*/
+}
+
+#img2:hover { /*when hovered, it turns to 360 degrees*/
+  transform: rotate(360deg);
+}
+
+#subhead2 {
+  padding-top: 100px;
+  text-align: center;
+}
+
+.mainimg {
+  padding-top: 7px;
+  margin-left: 350px;
+  transition: 1s ease-in-out; /*makes the transition smooth*/
+}
+
+.mainimg:hover {
+  transform: scale(1.5, 1.5); /*when hovered the image turns big*/
+}
+
+.main1 {
+  background-color:#85b286;
+}
+
+#img4 { /*makes the image go to left and makes the text wrap around it*/
+  border: 1px solid rgb(32, 79, 32);
+  border-radius: 8px;
+  padding: 20px;
+  margin: 20px;
+  width: 300px;
+  float: left;
+  background-color: rgb(32, 79, 32);
+  overflow: auto;
+}
+
+.part2 {
+  background-color: rgb(180, 220, 180);
+}
+
+.contact {
+  border: 1px solid rgb(114, 157, 114);
+  padding: 20px;
+}
+
+.contri {
+  border: 1px solid rgb(114, 157, 114);
+  padding: 20px;
+}
+
+section {
+  border: 1px solid green;
+  padding: 10px; 
+  overflow: auto; /*fits all elements into the section*/
+}
+
+.image {
+  width:283px;
+  float: left;
+  margin: 13px;
+  transition: 1s ease-in-out; /*makes the transition smooth */
+}
+
+.image:hover {
+  transform: rotate(360deg); /*when hovered it turns to 360 degrees*/
+}
+
+.text {
+  padding: 10px;
+}
+
+.image1 {
+  width: 300px;
+  float: right; /*image floated to the right*/
+  margin: 10px;
+  transition: 1s ease-in-out; /*makes transformation smooth*/
+}
+
+.image1:hover {
+  transform: rotate(360deg); /*when hovered it turns to 360 degrees*/
+}
+
+.con1 {
+  width: 350px;
+  border: 1px solid black;
+  text-align: center;
+  float: left; /*moves the image to the left*/
+  margin-left: 31px;
+  margin-right: 31px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  border-radius: 8%;
+  background-color: rgb(204, 228, 204);
+  padding: 10px;
+  transition: 1s ease-in-out; /*makes transformation smooth*/
+}
+
+.con1:hover {
+  transform: scale(1.1, 1.1); /*when hovered, the image turns to 360 degrees*/
+}
+
+.con2 {
+  width: 350px;
+  border: 1px solid black;
+  text-align: center;
+  float: left; /*floats the elemnts to the left*/
+  margin-left: 30px;
+  margin-right: 30px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  border-radius: 8%;
+  background-color: rgb(204, 228, 204);
+  padding: 10px;
+  transition: 1s ease-in-out; /*makes transformation smooth*/
+}
+
+.con2:hover {
+  transform: scale(1.1, 1.1); /*when hovered, the image turns to 360 degrees*/
+}
+
+.text2 {
+  text-align: center;
+}
+
+h1 {
+  text-align: center;
+}
+
+.foot {
+  clear: left; /*moves the footer down*/
+  background-image: green;
+  border: 1px solid black;
+  height: 200px;
+  background-color: rgb(18, 85, 18);
+}
+
+.foot p {
+  color: white;
+}
+
+main {
+  width: 90%; /* so that the main content section will not cover the whole page*/
+  margin: 0 auto; /*centers everything in the webpage*/
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+section:first {
+  font-weight: bold; /*selects all the first child, in other words,
+   the first element in every section*/
+}
+
+p:nth-child(even) {
+  text-decoration: underline; /*selects all the even-numbered paragraphs*/
+}
+
+p:last-of-type {
+  opacity: 0.7; /*selects all the last paragraph of any parent element in the webpage*/
+}
+
+p {
+  font-size: 18px;
+}
+
+.section1 {
+  padding: 20px;
+  translate: 2s ease-in-out; /*makes transformation smooth*/
+}
+
+.section1:hover {
+  transform: scale(0.9, 0.9); /*when hovered, it makes it smaller*/
+}
+
+.section2 {
+  width:100%;
+  translate: 2s ease-in-out; /*makes transformation smooth*/
+}
+
+.section2:hover {
+  transform: scale(0.9, 0.9); /*when hovered, it makes it smaller*/
+}
+
+.sec1 {
+  width: 100%;
+}
+
+.row {
+  background-color:rgb(204, 228, 204);
+  padding: 20px;
+}
+
+.sprite1 {
+	background: url('povicons.png') no-repeat -4px -10px;
+	width: 100px;
+	height: 90px;
+  border: 1px solid black;
+  border-radius: 50%;
+  background-color: rgb(204, 228, 204);
+  float: right; /*floats the elements to the right*/
+  margin: 15px;
+  transition: 1s ease-in-out; /*makes transformation smooth*/
+}
+
+.sprite2 {
+	background: url('povicons.png') no-repeat -100px -8px;
+	width: 100px;
+	height: 90px;
+  border: 1px solid black;
+  border-radius: 50%;
+  background-color: rgb(204, 228, 204);
+  float: right; /*floats the elements to the right*/
+  margin: 15px;
+  transition: 1s ease-in-out; /*makes transformation smooth*/
+}
+
+.sprite1:hover {
+  background-color: rgb(97, 167, 97);
+  border: 1px dotted white;
+  transform: translate(0, -10px); /*when hovered, it makes it moves it upwards along with the change of color and border */
+}
+
+.sprite2:hover {
+  background-color: rgb(97, 167, 97);
+  border: 1px dotted white;
+  transform: translate(0, -10px); /*when hovered, it makes it moves it upwards along with the change of color and border */
+}
+
